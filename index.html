@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Kench IA</title>
+  
+  <!-- Configuración obligatoria para iOS PWA (Pantalla Completa) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kench IA">
+  <link rel="apple-touch-icon" href="icon.png">
+  
+  <!-- Enlace al manifiesto de PWA -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Estilos Premium de la App -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Fuentes Modernas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Orbes de Brillo de Fondo -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Contenedor Principal de la App -->
+  <div class="app-container">
+    
+    <!-- Cabecera de la App -->
+    <header class="app-header">
+      <div class="header-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">Kench IA Online</span>
+      </div>
+      
+      <!-- Selector de Modelo Móvil -->
+      <select id="model-selector">
+        <option value="gemini-2.5-flash">Gemini 3.5 Flash</option>
+        <option value="gpt-4o-mini">GPT-4o Mini (ChatGPT)</option>
+        <option value="gpt-4o">GPT-4o (Premium)</option>
+        <option value="groq/llama3-70b-8192">Llama 3 70B (Groq Gratis)</option>
+      </select>
+    </header>
+
+    <!-- Contenedor de Mensajes -->
+    <main class="chat-area" id="chat-messages">
+      <div class="message agent animate-fade-in">
+        ¡Hola Kenchin! Soy KenchIA, tu asistente personal móvil. ¿En qué te puedo colaborar hoy desde tu iPhone?
+      </div>
+    </main>
+
+    <!-- Barra Inferior de Entrada -->
+    <footer class="app-footer">
+      <div class="input-container">
+        <button id="mic-btn" class="icon-btn" title="Dictar por voz">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+          </svg>
+        </button>
+        <input type="text" id="chat-input" placeholder="Hazme una pregunta o dictame..." autocomplete="off">
+        <button id="send-btn" class="icon-btn send" title="Enviar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </footer>
+    
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
